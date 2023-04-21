@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, #434343 -112%, black 40%);
+    background-size: 500%;
+    overflow: hidden;
+    animation: fanimado 30s infinite;
+  }
+  
+  .box {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box h2 {
+    text-decoration: none;
+    position: fixed;
+    color: #fff;
+    font-size: 5em;
+    font-weight: 490;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+      0 0 80px #00b3ff, 0 0 120px #00b3ff;
+  }
+  
+  .box a {
+    padding-top: 200px;
+    text-decoration: none;
+    position: fixed;
+    color: #fff;
+    font-size: 3em;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 20px #ed0707, 0 0 40px #ed0707, 0 0 80px #ed0707,
+      0 0 120px #ed0707, 0 0 160px #ed0707;
+  }
+  
+  .lightbar {
+    position: absolute;
+    top: 80;
+    left: -50px;
+    width: 10px;
+    height: 40%;
+    border-radius: 10px;
+    background: #fff;
+    z-index: 2;
+    box-shadow: 0 0 10px #00ff40, 0 0 20px #00ff40, 0 0 40px #00ff40,
+      0 0 80px #00ff40, 0 0 120px #00ff40;
+    animation: animatelightbar 7s linear infinite;
+  }
+  
+  @keyframes animatelightbar {
+    0%,
+    5% {
+      transform: scale(0) translate(0);
+    }
+  
+    90% {
+      transform: scale(1) translate(0);
+    }
+  }
+  
+  @keyframes fanimado{
+    0%{
+      background-position: 0% 50%;
+    }
+    50%{
+      background-position: 100% 30%;
+    }
+    100%{
+      background-position: 0% 50%;
+    }
+  }
